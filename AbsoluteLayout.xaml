@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UsoLayout.AbsoluteLayout"
+             Title="AbsoluteLayout">
+
+    <AbsoluteLayout>
+
+        <ScrollView AbsoluteLayout.LayoutBounds="0, 0, 1, 1"
+                    AbsoluteLayout.LayoutFlags="All">
+            <StackLayout>
+
+                <Label Text="SCROLL"
+                       FontSize="10"
+                       Margin="15"/>
+                <BoxView Color="PaleVioletRed"
+                         HeightRequest="1000"/>
+            </StackLayout>
+        </ScrollView>
+        
+        <Button Text=" GridLay"
+                Clicked="IrGridLay"
+                AbsoluteLayout.LayoutBounds="1, 1, AutoSize, AutoSize"
+                AbsoluteLayout.LayoutFlags="PositionProportional" />
+
+        <Image 
+              Source="dotnet_bot.png"
+              HeightRequest="185"
+              Grid.Row="0" Grid.Column="0"
+              HorizontalOptions="Start">
+        </Image>
+        
+    </AbsoluteLayout>
+</ContentPage>

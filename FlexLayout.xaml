@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UsoLayout.FlexLayout"
+             Title="FlexLayout">
+
+    <ScrollView>
+        <FlexLayout Direction="Column" Padding="10">
+            <Frame Padding="20" Margin="5" BorderColor="Green" >
+                <Grid RowDefinitions="*,*"
+                        ColumnDefinitions="*,*">
+                    <Image 
+                        Source="dotnet_bot.png"
+                        HeightRequest="185"
+                        Grid.Row="0" Grid.Column="0"
+                        HorizontalOptions="Start">
+                        <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="IrAbsoluteLayout" />
+                        </Image.GestureRecognizers>
+                    </Image>
+
+                    <Label Text="..."
+                       FontSize="20"
+                       HorizontalOptions="End"
+                       Grid.Row="0" Grid.Column="1"/>
+                </Grid>
+
+            </Frame>
+
+
+            <Frame Padding="5" Margin="5" BorderColor="Plum" >
+                <Grid RowDefinitions="*,*"
+                    ColumnDefinitions="*,*">
+                    <ImageButton 
+                        Source="dotnet_bot.png"
+                        HeightRequest="185"
+                        Grid.Row="0" Grid.Column="0"
+                        HorizontalOptions="Start"
+                        Clicked="IrAbsoluteLayout"/>
+
+                    <Label Text="... "
+                        FontSize="20"
+                        HorizontalOptions="End"
+                        Grid.Row="0" Grid.Column="1"/>
+                </Grid>
+
+            </Frame>
+            <Frame Padding="5" Margin="5" BorderColor="Plum" >
+                <Grid RowDefinitions="*,*"
+                        ColumnDefinitions="*,*">
+                    <ImageButton 
+                        Source="dotnet_bot.png"
+                        HeightRequest="185"
+                        Grid.Row="0" Grid.Column="0"
+                        HorizontalOptions="Start"
+                        Clicked="IrAbsoluteLayout"/>
+
+                    <Label Text="..."
+                        FontSize="20"
+                        HorizontalOptions="End"
+                        Grid.Row="0" Grid.Column="1"/>
+                </Grid>
+
+            </Frame>
+        </FlexLayout>
+
+    </ScrollView>
+</ContentPage>
